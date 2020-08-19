@@ -1,0 +1,38 @@
+.About {
+    background: linear-gradient(to right top, rgba(34, 104, 184, 0.678) ,  rgba(108, 67, 185, 0.5), rgba(182, 108, 131, 0.863 )),url('/about.jpg') top center no-repeat;
+    background-size: cover;
+    min-height: 92vh;
+    width:100%;
+    color: white;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+}
+
+.About h1{
+display: block;
+text-align: center;
+padding-bottom: 20px;
+}
+
+.About h1::after{
+    content: "";
+    width:18%;
+    display:block;
+    margin:0 auto;
+    border-bottom: 3px solid #a8326d;
+}
+.About p{
+    text-align: center;
+    padding: 40px;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+   
+}
+
+
+
+

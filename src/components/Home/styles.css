@@ -1,0 +1,27 @@
+.Home{
+    background: url('/homePage.jpg')  center no-repeat;
+    background-size: cover;
+    min-height: 92vh;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.Home h1{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    color:rgb(190,115, 139);
+
+}
+
+.Home p {
+    font-size: 35px;
+    color:rgb(255,187, 209);
+    text-align: center;
+    text-shadow: 1px 1px 2px white;
+}

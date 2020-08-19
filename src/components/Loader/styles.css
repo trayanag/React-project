@@ -1,0 +1,25 @@
+.Loader {
+  background-image : url(https://media2.giphy.com/media/KxzKGZJrYeILmlr9UA/200.webp?cid=ecf05e4795aac30ff783fb6624ce651773ea78106e7a6869&rid=200.webp);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    background-color: white;
+    color: black;
+    
+  }
+  
+  .Loader:not(.local) {
+    position: fixed;
+  }
+  
+  .Loader.local {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    min-height: 140px;
+    min-width: 160px;
+    font-size: 30px;
+    text-align: center;
+  }

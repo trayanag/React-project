@@ -1,0 +1,16 @@
+@import 'https://fonts.googleapis.com/css?family=Lora';
+
+body {
+  margin: 0;
+  font-family:  'Lora',sans-serif;
+  font-size: 16px;
+  line-height: inherit;
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

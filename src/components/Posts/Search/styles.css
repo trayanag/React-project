@@ -1,0 +1,6 @@
+.search{
+    padding: 10px;
+}
+.search input{
+    border: 2px solid rgba(182, 108, 131, 0.863 );
+}

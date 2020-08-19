@@ -1,0 +1,29 @@
+.main-nav-blog {
+    height: 100%;
+    padding: 0 1rem;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: rgba(190,115, 139, 0.5);
+  }
+
+  .main-nav-blog li {
+	list-style: none outside;
+  }
+  
+  .main-nav-blog li a {
+    display: block;
+    padding: 0.9em 1em;
+    color:  white;
+    text-decoration: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  li a:hover {
+    text-decoration: none;
+     color:   rgba(190,115, 139);
+  }
+  

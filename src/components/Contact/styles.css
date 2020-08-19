@@ -1,0 +1,24 @@
+
+.Contact {
+display: flex;
+justify-content: space-between;
+padding: 1.5em;
+margin-top:1em;
+}
+.wrap-contact{
+    width: 100%;
+}
+.Contact h3{
+    padding-bottom: 20px;
+    }
+.Contact span{
+    color:rgb(190,115, 139);
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold
+}
+.Contact p{
+padding: 0.5em 0em 1em 0em;
+font-size: large;
+}

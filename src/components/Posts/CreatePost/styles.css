@@ -1,0 +1,33 @@
+.create-listings {
+    margin: 1% auto;
+    width: 40%;
+    background: url('/createPage.jpg') top center no-repeat;
+    background-size: cover;
+}
+.container {
+    padding: 10px;
+    text-align: center;
+}
+.container  p{
+    color:white;
+    font-weight:bold;
+}
+
+h1 {
+    padding: 0 10px 0 30px;
+    color:white;
+    
+}
+.container input[type=text],input[type=email], textarea[type=text] {
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    width: 75%;
+}
+
+input[type=text]:focus, input[type=email]:focus,input[type=password]:focus,textarea[type=text]:focus {
+    background-color:rgb(238,238,238);
+    outline: none;
+}
