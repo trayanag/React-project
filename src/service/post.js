@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const host = 'http://localhost:9999/api';
 
-const postService = {
+const post = {
 
 
     get: function (id) {
@@ -10,8 +10,6 @@ const postService = {
     },
 
     
-
-
     create: function (title, description,keywords,content,date1) {
         return axios.post(`${host}/posts`,{
                 title,
@@ -49,4 +47,4 @@ const postService = {
     
 }
 
-export default postService;
+export default post;

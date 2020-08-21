@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import userService from '../../services/userService';
+import userService from '../../service/userService';
 import registerValidation from '../../utils/registerValidation';
 import FormInput from '../../components/Form-input';
 import CustomButton from '../../components/CustomButton';

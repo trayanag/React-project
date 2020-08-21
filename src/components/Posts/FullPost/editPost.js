@@ -1,7 +1,7 @@
 /*  eslint-disable react-hooks/rules-of-hooks */
 import React, { useEffect, useState, useContext } from 'react';
-import postService from '../../../services/postService';
-import AuthContext from '../../../Context/auth';
+import post from '../../../service/post';
+import AuthContext from '../../context';
 import validationEditPost from '../../../utils/validationEditPost';
 import '../CreatePost/styles.css'
 import CustomButton from '../../../components/CustomButton';
@@ -33,7 +33,7 @@ const editPost = (props) => {
     };
 
     useEffect(() => {
-        postService.get(postId).then(res => {
+        post.get(postId).then(res => {
             
             setTitle(res.data.title);
             setDescription(res.data.description)
@@ -47,7 +47,7 @@ const editPost = (props) => {
 
         if (validationEditPost(title, description, keywords, content)) {
 
-            postService.edit(postId, title, description, keywords, content).then(() => {
+            post.edit(postId, title, description, keywords, content).then(() => {
                 setUserStatus({ auth: true, userId: user.userId, title, description, keywords, content });
             }).then(() => {
                 props.history.push('/all');

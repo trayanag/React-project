@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useContext, useReducer } from 'react';
-import userService from '../../../services/userService';
-import AuthContext from '../../../Context/auth';
+import userService from '../../../service/userService';
+import AuthContext from '../../context';
 import validationEditProfile from '../../../utils/validationEditProfile';
 import CustomButton from '../../../components/CustomButton';
 

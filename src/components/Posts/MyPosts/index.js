@@ -1,7 +1,7 @@
-import React, { useContext, useEffect,useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import PostList from '../Post/card-post';
-import postService from '../../../services/postService';
-import AuthContext from '../../../Context/auth';
+import post from '../../../service/post';
+import AuthContext from '../../context';
 
 
 const MyPosts = () => {
@@ -10,17 +10,18 @@ const MyPosts = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        postService.get().then(posts => {
-          //console.log(posts.data)
+        post.get().then(posts => {
+           // console.log(posts.data)
+            //console.log(user.userId)
             const myPostsArray = posts.data.filter(p => p.author._id === user.userId);
-        // console.log(myPostsArray)
-            
+           
             setPosts(myPostsArray);
-            
-        });
-    },[user.userId]);
 
-    return  <PostList  posts={posts}/>;
+        });
+    }, [user.userId]);
+
+
+    return <PostList posts={posts} />;
 }
 
 export default MyPosts;

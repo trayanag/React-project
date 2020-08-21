@@ -1,13 +1,14 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import postService from '../../../services/postService';
-import AuthContext from '../../../Context/auth'
+import post from '../../../service/post';
+import AuthContext from '../../context'
 import './styles.css';
 
 
 const FullPost = (props) => {
 
     const postId = props.match.params.id;
+    console.log(postId)
     const [user] = useContext(AuthContext);
     const [title, setTitle] = useState();
     const [content, setContent] = useState();
@@ -16,7 +17,7 @@ const FullPost = (props) => {
     const [creator, setCreator] = useState(false);
 
     useEffect(() => {
-        postService.get(postId).then(res => {
+        post.get(postId).then(res => {
             setTitle(res.data.title);
             setDescription(res.data.description);
             setKeywords(res.data.keywords);
@@ -29,14 +30,12 @@ const FullPost = (props) => {
     }, [postId, user.userId]);
 
     const deletePost = () => {
-        postService.delete(postId).then(() => {
+        post.delete(postId).then(() => {
             props.history.push('/myPosts');
         }).catch(err => console.log(err));
     }
 
-    return (
-       
-            <div className="FullPost">
+    return ( <div className="FullPost">
                 <h2>{title} #{keywords}</h2>
                 <p>{description}</p>
                 <p>{content}</p>

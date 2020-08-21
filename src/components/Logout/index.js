@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import userService from '../../services/userService';
-import AuthContext from '../../Context/auth';
+import userService from '../../service/userService';
+import AuthContext from '../context';
 import { Redirect } from 'react-router-dom';
 
 const Logout = props => {

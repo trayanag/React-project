@@ -19,7 +19,9 @@ import Search from '../components/Posts/Search';
 import Loader from '../components/Loader';
 import Notifications from 'react-notify-toast'
 
-import { AuthContextProvider } from '../Context/auth'
+// import { AuthContextProvider } from '../../context'
+import { AuthContextProvider } from '../../src/components/context/index'
+
 
 
 const MyPosts = React.lazy(() => import('../components/Posts/MyPosts'));

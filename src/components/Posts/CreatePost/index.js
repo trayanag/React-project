@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import postService from '../../../services/postService';
+import post from '../../../service/post';
 import validationPost from '../../../utils/validationPost';
 import CustomButton from '../../../components/CustomButton';
 import './styles.css';
@@ -35,7 +35,7 @@ class CreatePost extends Component {
     const { title, description, keywords, content, date1 } = this.state;
 
     if (validationPost(title, description, keywords, content)) {
-      postService.create(title, description, keywords, content, date1).then(() => {
+      post.create(title, description, keywords, content, date1).then(() => {
         this.props.history.push('/all');
       });
     }

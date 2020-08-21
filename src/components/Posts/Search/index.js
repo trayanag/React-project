@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import postService from '../../../services/postService';
+import post from '../../../service/post';
 import PostList from '../Post/card-post';
 import SeacrhBox from './search-box';
 import './styles.css';
@@ -10,7 +10,7 @@ class Search extends Component{
         searchField: ''
     }
     componentDidMount() {
-        postService.get().then(posts => {
+        post.get().then(posts => {
             this.setState({posts: posts.data})
         });
         

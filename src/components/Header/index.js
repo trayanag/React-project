@@ -1,8 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 import './styles.css';
-import AuthContext from '../../Context/auth'
-
+import AuthContext from '../context';
 
 
 function Header() {

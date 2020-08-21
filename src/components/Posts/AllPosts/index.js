@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import postService from '../../../services/postService';
+import post from '../../../service/post';
 import PostList from '../Post/card-post';
 
 
@@ -10,8 +10,8 @@ class AllPosts extends Component {
     }
     componentDidMount() {
 
-        postService.get().then(posts => {
-            // console.log(posts.data);
+        post.get().then(posts => {
+           //  console.log(posts.data);
             this.setState({ posts: posts.data });
         });
     }

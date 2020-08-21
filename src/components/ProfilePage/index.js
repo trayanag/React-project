@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import AuthContext from '../../Context/auth';
-import postService from '../../services/postService';
-import userService from '../../services/userService';
+import AuthContext from '../context';
+import post from '../../service/post';
+import userService from '../../service/userService';
 import './styles.css';
 
 
@@ -15,7 +15,7 @@ const ProfilePage = (props) => {
 
 
     useEffect(() => {
-        postService.get().then(posts => {
+        post.get().then(posts => {
 
             const myPostsArray = posts.data.filter(p => p.author._id === user.userId);
             // console.log(myPostsArray.length)

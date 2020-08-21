@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react';
-import userService from '../../services/userService'
+import userService from '../../service/userService'
 import loginValidation from '../../utils/loginValidation';
 import { useHistory } from "react-router-dom";
-import AuthContext from '../../Context/auth';
+import AuthContext from '../context';
 import FormInput from '../../components/Form-input';
 import CustomButton from '../../components/CustomButton';
 import './styles.css';
